@@ -172,7 +172,7 @@ class Manager{
     {
         $array = array();
         foreach($translations as $translation){
-            array_set($array[$translation->locale][$translation->group], $translation->key, $translation->value);
+            $array[$translation->locale][$translation->group][$translation->key] = $translation->value;
         }
         return $array;
     }
